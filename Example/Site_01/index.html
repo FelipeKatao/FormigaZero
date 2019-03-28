@@ -3,6 +3,23 @@
     <head>
         <title>Site Demo</title>
         <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+    <script>
+        $(function()
+        {
+            $.ajax({
+                url: "/Framework/Formiga_01/server.py",
+                type: "get",
+                datatype: "html",
+                data: { var1: "foo", var2: "foo" },
+                success: function(response){
+                        $("#content").html(response);
+                        console.log("OK"); 
+                }
+            });
+        });
+
+    </script>
     </head>
     <body>
         <div id="content"><h1>Hello Formiga!</h1>
