@@ -1,0 +1,25 @@
+#topo{
+    background-color: gray;
+}
+
+#menu-main a{
+    margin:auto;
+    color:white;
+    margin-left: 4px
+}
+#menu-main{
+    margin-left: 40px;
+}
+.nav-opt{
+    color:white;
+    padding: 20px;
+}
+.nav-opt:hover{
+    color:#CCC;
+    text-decoration:none;
+}
+#corpo{
+    position: relative;
+    margin-top: 20px;
+    background-color: blue;
+}
