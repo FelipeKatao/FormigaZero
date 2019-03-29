@@ -3,14 +3,21 @@ from flask import render_template
 from os import listdir
 
 app = Flask(__name__)
+NameCliente=""
 
 @app.route('/')
 def api_root():
     return render_template("test.html")
 
+@app.route('/<clientePath>')
+def api_root_cliente(clientePath):
+    NameCliente=clientePath
+    return render_template(NameCliente+"/cliente.html")
+
 @app.route('/Oat',methods=['GET','POST'])
 def api_articles():
     if request.method == 'POST':
+
         with open('Data_01/test3.txt', 'w+') as f:
             f.write(str("Internal source data"))
         return "Atualizado"
