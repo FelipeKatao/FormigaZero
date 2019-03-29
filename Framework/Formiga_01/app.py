@@ -5,9 +5,14 @@ from os import listdir
 app = Flask(__name__)
 NameCliente=""
 
-@app.route('/')
+@app.route('/',methods=['GET',"POST"])
 def api_root():
-    return render_template("test.html")
+    id_Project=""
+    if request.method == 'POST':
+        id_Project=request.form['NameProject']
+        return id_Project
+
+    return render_template("index.html")
 
 @app.route('/<clientePath>')
 def api_root_cliente(clientePath):

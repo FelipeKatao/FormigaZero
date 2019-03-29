@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">   
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: gray; font-size: 20px;">
@@ -21,9 +21,29 @@
                 </div>
             </div>
         </nav>
-    <div  class="container" style="background-color:indianred;">
+
+    <div  class="container">
       <div id="corpo">
-        Hello world
+          <form action="http://127.0.0.1:5000/Oat" method="post">
+              <div class="form-group">
+                <label for="NameProject">Nome do seu projeto:</label>
+                <input type="text" class="form-control" id="NameProject"  placeholder="Projeto">
+                <small id="emailHelp" class="form-text text-muted">O seu projeto deve ter um nome</small>
+              </div>
+              <select class="form-control">
+                  <option>Selecione um tipo de projeto</option>
+                  <option>Dash Project</option>
+                  <option>Menik Project</option>
+                  <option>Stéphanie Ai Project</option>
+                  <option>Formiga server Project</option>
+                </select>
+                <br>
+              <div class="form-group">
+                  <label for="exampleFormControlFile1">Escolha uma pagina para o seu projeto:</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+              <button type="submit" class="btn btn-primary">Criar Projeto</button>
+            </form>
         </div>
     </div>
 
