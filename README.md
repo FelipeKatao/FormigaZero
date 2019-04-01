@@ -1,2 +1,3 @@
 # FormigaZero
-Sistema de integração web para os produtos da formiga
+Sistema de integração web. 
+[Ainda em fase de desenvolvimento]
